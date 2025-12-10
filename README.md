@@ -44,7 +44,7 @@ The demo performs the following steps:
    - If `V(x)` satisfies all three conditions, the candidate Lyapunov function can be used to determine system stability and the system is **stable** around the equilibrium.
    - If one of the conditions fails, the candidate function is **not valid**, and the stability is inconclusive.
    - Users can explore the numeric and visual behavior to understand how trajectories would evolve.
-   - The user can visualize the displayed functions and interact with them to determine the stability type (asymptotically stable or Lyapunov stable). If the user cannot find any point where dV/dt = 0 in the region of interest, excluding the origin—that is, in (x1, x2) - {(0,0)}—then the system is asymptotically stable; otherwise, it is only Lyapunov stable.
+   - In theory, the user can visualize the displayed functions and interact with them to determine the stability type (asymptotically stable or Lyapunov stable). If the user cannot find any point where dV/dt = 0 in the region of interest, excluding the origin—that is, in (x1, x2) - {(0,0)}—then the system is asymptotically stable; otherwise, it is only Lyapunov stable. However, the numerical calculation in this code should not be the reference for determining if the system is Lyapunov stable or asymptotically stable.
 
 ---
 
@@ -74,7 +74,7 @@ The demo performs the following steps:
 
 *(Replace these with your own screenshots in `images/` folder.)*
 
-![V(x) surface](images/V_surface.png)
+![V(x) surface]([images/V_surface.png](https://github.com/Tanayot007/Interactive_Lyapunov_2D/blob/main/1.png))
 
 ![Vdot(x) surface](images/Vdot_surface.png)
 
