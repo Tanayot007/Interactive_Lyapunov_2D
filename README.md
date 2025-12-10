@@ -16,13 +16,11 @@ This repository contains a Python demonstration for **visualizing candidate Lyap
 
 This demo allows users to:
 
-1. Test whether a candidate function \(V(x_1, x_2)\) is a Lyapunov function for a given 2D dynamical system:
-   \[
-   \dot{x}_1 = f_1(x_1, x_2), \quad
-   \dot{x}_2 = f_2(x_1, x_2)
-   \]
+1. Test whether a candidate function V(x1, x2) is a Lyapunov function for a given 2D dynamical system:
+   dx1/dt = f1(x1, x2)
+   dx2/dt = f2(x1, x2)
 2. Explore the stability of the system visually through 3D plots.
-3. Interactively inspect surfaces and contours of \(V(x)\) and \(\dot{V}(x)\).
+3. Interactively inspect surfaces and contours of V(x1, x2) and d/dtV(x1, x2).
 
 ---
 
@@ -31,17 +29,22 @@ This demo allows users to:
 The demo performs the following steps:
 
 1. **Lyapunov Analysis**
-   - Condition 1: \(V(0) = 0\) at the equilibrium point.
-   - Condition 2: \(V(x) > 0\) for all \(x \neq 0\) (positive definite).
-   - Condition 3: \(\dot{V}(x) \le 0\) for all \(x \neq 0\) (non-increasing along system trajectories).
+   - Condition 1: V(0,0) = 0 at the equilibrium point.
+   - Condition 2: V(x1, x2) > 0 for all (x1, x2) - {(0,0)} (positive definite).
+   - Condition 3: dV/dt <= 0 for all (x1, x2) - {(0,0)} (non-increasing along system trajectories).
    - Based on these conditions, the program determines:
      - If the candidate function is a valid Lyapunov function.
      - The type of stability (stable/inconclusive).
+   Note: In theory
+      1. if dV/dt <= 0 (negative semidefinite), we can say this equilibrium point is Lyapunov stable.
+      2. if dV/dt < 0 (negative definite), we can say this equilibrium point is Asymtotically stable.
+      However, it is not easy to check numerically, so I have the interactive functions ready, following the python file.
 
 2. **Interpretation of Results**
-   - If `V(x)` satisfies all three conditions, the system is **stable** around the equilibrium.
-   - If `Vdot(x) > 0` anywhere, the candidate function is **not valid**, and the system may be unstable or inconclusive.
+   - If `V(x)` satisfies all three conditions, the candidate Lyapunov function can be used to determine system stability and the system is **stable** around the equilibrium.
+   - If one of the conditions fails, the candidate function is **not valid**, and the stability is inconclusive.
    - Users can explore the numeric and visual behavior to understand how trajectories would evolve.
+   - The user can visualize the displayed functions and interact with them to determine the stability type (asymptotically stable or Lyapunov stable). If the user cannot find any point where dV/dt = 0 in the region of interest, excluding the origin—that is, in (x1, x2) - {(0,0)}—then the system is asymptotically stable; otherwise, it is only Lyapunov stable.
 
 ---
 
