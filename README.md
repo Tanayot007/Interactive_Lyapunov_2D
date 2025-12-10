@@ -24,7 +24,7 @@ This demo performs the following tasks:
    - Conditions checked:
      1. V(0) = 0 at the equilibrium.
      2. V(x) > 0 for all x-{0} (positive definite).
-     3. Vdot(x) for all x-{0} (non-increasing along system trajectories).
+     3. Vdot(x) <= 0 for all x-{0} (non-increasing along system trajectories).
    - Reports the stability type and gives a conclusion if the candidate function can be used.
 
 2. **Interactive Visualization**
