@@ -29,7 +29,7 @@ This demo allows users to:
 pip install numpy sympy matplotlib
 4. Run the Python script using a terminal or command prompt:
 python3 interactive_lyapunov_2D.py
-user will input 1. the dynamics: x1dot and x2dot in term of the polynomial functions and 2. input the candidate exponantial Lyapunov function
+user will input 1. the dynamics: x1dot and x2dot in term of the polynomial functions and 2. input the candidate polynomial Lyapunov function (2D system)
 
 ---
 
