@@ -28,7 +28,7 @@ This demo allows users to:
 2. Install Python dependencies (if you don’t have them already):
 pip install numpy sympy matplotlib
 4. Run the Python script using a terminal or command prompt:
-python interactive_lyapunov_2D.py
+python3 interactive_lyapunov_2D.py
 
 ---
 
