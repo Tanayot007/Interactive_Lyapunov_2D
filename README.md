@@ -28,10 +28,10 @@ This demo performs the following tasks:
    - Reports the stability type and gives a conclusion if the candidate function can be used.
 
 2. **Interactive Visualization**
-   - 3D surface plot of \(V(x)\) or \(\dot{V}(x)\) over a 2D domain.
+   - 3D surface plot of \(V(x)\) or \(Vdot(x)) over a 2D domain.
    - Adjustable **Z-slice** slider to inspect contours.
    - **Textbox** to enter a specific Z value for contour lines.
-   - **Radio buttons** to switch between viewing \(V(x)\) and \(\dot{V}(x)\).
+   - **Radio buttons** to switch between viewing \(V(x)\) and \(Vdot(x)).
    - **Plane orientation buttons**:
      - x1-x2 plane
      - x1-z plane
