@@ -74,7 +74,7 @@ The demo performs the following steps:
 
 *(Replace these with your own screenshots in `images/` folder.)*
 
-![V(x) surface]([images/V_surface.png](https://github.com/Tanayot007/Interactive_Lyapunov_2D/blob/main/1.png))
+![V(x) surface](https://github.com/Tanayot007/Interactive_Lyapunov_2D/blob/main/1.png)
 
 ![Vdot(x) surface](images/Vdot_surface.png)
 
