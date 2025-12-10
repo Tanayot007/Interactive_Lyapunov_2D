@@ -8,57 +8,84 @@ This repository contains a Python demonstration for **visualizing candidate Lyap
 
 - `interactive_lyapunov_2D.py` : Main Python script containing the interactive Lyapunov function demo.
 - `README.md` : This documentation file.
+- `images/` : (Optional) Folder to store screenshots of the demo.
 
 ---
 
-## **Description**
+## **Overview**
 
-This demo performs the following tasks:
+This demo allows users to:
+
+1. Test whether a candidate function \(V(x_1, x_2)\) is a Lyapunov function for a given 2D dynamical system:
+   \[
+   \dot{x}_1 = f_1(x_1, x_2), \quad
+   \dot{x}_2 = f_2(x_1, x_2)
+   \]
+2. Explore the stability of the system visually through 3D plots.
+3. Interactively inspect surfaces and contours of \(V(x)\) and \(\dot{V}(x)\).
+
+---
+
+## **Technical Analysis**
+
+The demo performs the following steps:
 
 1. **Lyapunov Analysis**
-   - Checks if a candidate function V(x1, x2) is a Lyapunov function for the given system:
-     
-     x1_dot = f1(x1, x2), 
-     x2_dot = f2(x1, x2)
-     
-   - Conditions checked:
-     1. V(0) = 0 at the equilibrium.
-     2. V(x) > 0 for all x-{0} (positive definite).
-     3. Vdot(x) <= 0 for all x-{0} (non-increasing along system trajectories).
-   - Reports the stability type and gives a conclusion if the candidate function can be used.
+   - Condition 1: \(V(0) = 0\) at the equilibrium point.
+   - Condition 2: \(V(x) > 0\) for all \(x \neq 0\) (positive definite).
+   - Condition 3: \(\dot{V}(x) \le 0\) for all \(x \neq 0\) (non-increasing along system trajectories).
+   - Based on these conditions, the program determines:
+     - If the candidate function is a valid Lyapunov function.
+     - The type of stability (stable/inconclusive).
 
-2. **Interactive Visualization**
-   - 3D surface plot of \(V(x)\) or \(Vdot(x)) over a 2D domain.
-   - Adjustable **Z-slice** slider to inspect contours.
-   - **Textbox** to enter a specific Z value for contour lines.
-   - **Radio buttons** to switch between viewing \(V(x)\) and \(Vdot(x)).
-   - **Plane orientation buttons**:
-     - x1-x2 plane
-     - x1-z plane
-     - x2-z plane
+2. **Interpretation of Results**
+   - If `V(x)` satisfies all three conditions, the system is **stable** around the equilibrium.
+   - If `Vdot(x) > 0` anywhere, the candidate function is **not valid**, and the system may be unstable or inconclusive.
+   - Users can explore the numeric and visual behavior to understand how trajectories would evolve.
+
+---
+
+## **Interactive Visualization**
+
+- **3D Surface Plot**
+  - Visualizes `V(x)` or `Vdot(x)` over a 2D grid.
+  - Use mouse to rotate, zoom, and pan.
+  
+- **Slider**
+  - Adjusts a Z-slice to inspect contour lines.
+
+- **Textbox**
+  - Enter a specific Z value to highlight contour lines at that height.
+
+- **Radio Buttons**
+  - Switch between viewing `V(x)` or `Vdot(x)`.
+
+- **Plane Orientation Buttons**
+  - x1-x2 plane
+  - x1-z plane
+  - x2-z plane
+
+---
+
+## **Example Screenshots**
+
+*(Replace these with your own screenshots in `images/` folder.)*
+
+![V(x) surface](images/V_surface.png)
+
+![Vdot(x) surface](images/Vdot_surface.png)
 
 ---
 
 ## **Dependencies**
 
-Make sure you have the following Python packages installed:
+You need Python 3 and the following packages:
 
 - `numpy`
 - `sympy`
 - `matplotlib`
 
-You can install them using `pip`:
+Install them using pip:
 
 ```bash
 pip install numpy sympy matplotlib
-
-## How to Run
-
-1. Make sure Python 3 is installed with the dependencies: numpy, sympy, matplotlib.
-2. Clone or download the repository.
-3. Run the Python script:
-
-```bash
-python3 interactive_lyapunov_2D.py
-
-
