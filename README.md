@@ -51,3 +51,14 @@ You can install them using `pip`:
 
 ```bash
 pip install numpy sympy matplotlib
+
+## How to Run
+
+1. Make sure Python 3 is installed with the dependencies: numpy, sympy, matplotlib.
+2. Clone or download the repository.
+3. Run the Python script:
+
+```bash
+python3 interactive_lyapunov_2D.py
+
+
