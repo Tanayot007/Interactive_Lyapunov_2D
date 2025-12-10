@@ -72,11 +72,23 @@ The demo performs the following steps:
 
 ## **Example Screenshots**
 
-*(Replace these with your own screenshots in `images/` folder.)*
+Test case 1: x1dot= -x1, x2dot=-2*x2, V(candidate Lyapunov function)=x1^2 + x2^2
 
-![V(x) surface](https://github.com/Tanayot007/Interactive_Lyapunov_2D/blob/main/1.png)
+![sample_output1](https://github.com/Tanayot007/Interactive_Lyapunov_2D/blob/main/1.png)
 
-![Vdot(x) surface](images/Vdot_surface.png)
+![Vdot(x) surface](https://github.com/Tanayot007/Interactive_Lyapunov_2D/blob/main/2.png)
+
+Conclusion: This candidate Lyapunov function can be used to determine the system stability
+
+Test case 2: x1dot= -x1, x2dot=-2*x2, V(candidate Lyapunov function)=x1^2 - x2^2
+
+![sample_output1](https://github.com/Tanayot007/Interactive_Lyapunov_2D/blob/main/3.png)
+
+![Vdot(x) surface](https://github.com/Tanayot007/Interactive_Lyapunov_2D/blob/main/4.png)
+
+Conclusion: This candidate Lyapunov function cannot be used to determine the system stability. User need to pick a new one.
+Reasons: The candidate does not obey condition 2 and 3.
+
 
 ---
 
