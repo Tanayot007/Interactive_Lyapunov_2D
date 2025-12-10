@@ -13,29 +13,45 @@ This repository contains a Python demonstration for **visualizing candidate Lyap
 
 ## **Description**
 
+Description
+
 This demo performs the following tasks:
 
-1. **Lyapunov Analysis**
-   - Checks if a candidate function \(V(x_1, x_2)\) is a Lyapunov function for the given system:
-     \[
-     \dot{x}_1 = f_1(x_1, x_2), \quad
-     \dot{x}_2 = f_2(x_1, x_2)
-     \]
-   - Conditions checked:
-     1. \(V(0) = 0\) at the equilibrium.
-     2. \(V(x) > 0\) for all \(x \neq 0\) (positive definite).
-     3. \(\dot{V}(x) \le 0\) for all \(x \neq 0\) (non-increasing along system trajectories).
-   - Reports the stability type and gives a conclusion if the candidate function can be used.
+Lyapunov Analysis
 
-2. **Interactive Visualization**
-   - 3D surface plot of \(V(x)\) or \(\dot{V}(x)\) over a 2D domain.
-   - Adjustable **Z-slice** slider to inspect contours.
-   - **Textbox** to enter a specific Z value for contour lines.
-   - **Radio buttons** to switch between viewing \(V(x)\) and \(\dot{V}(x)\).
-   - **Plane orientation buttons**:
-     - x1-x2 plane
-     - x1-z plane
-     - x2-z plane
+Checks if a candidate function V(x1, x2) can be used as a Lyapunov function for a given system with dynamics:
+
+x1_dot = f1(x1, x2)
+
+x2_dot = f2(x1, x2)
+
+The following conditions are verified:
+
+V(0,0) = 0 at the equilibrium point.
+
+V(x1, x2) > 0 for all points other than the equilibrium (positive definite).
+
+The derivative along the system trajectory, Vdot(x1, x2) = dV/dt, is less than or equal to 0 everywhere (non-increasing along the system motion).
+
+The program reports the stability type and gives a conclusion about whether the candidate function is valid.
+
+Interactive Visualization
+
+3D surface plot of V(x1, x2) or Vdot(x1, x2) over a 2D grid.
+
+Adjustable Z-slice slider to inspect contour levels.
+
+Textbox to enter a specific Z value for the contour line.
+
+Radio buttons to switch between viewing V and Vdot.
+
+Plane orientation buttons to change the viewing angle:
+
+x1-x2 plane
+
+x1-z plane
+
+x2-z plane
 
 ---
 
