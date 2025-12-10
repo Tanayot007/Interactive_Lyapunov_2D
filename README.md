@@ -75,19 +75,21 @@ The demo performs the following steps:
 Test case 1: x1dot= -x1, x2dot=-2*x2, V(candidate Lyapunov function)=x1^2 + x2^2
 
 ![sample_output1](https://github.com/Tanayot007/Interactive_Lyapunov_2D/blob/main/1.png)
-
+![V(x) surface](https://github.com/Tanayot007/Interactive_Lyapunov_2D/blob/main/5.png)
 ![Vdot(x) surface](https://github.com/Tanayot007/Interactive_Lyapunov_2D/blob/main/2.png)
 
-Conclusion: This candidate Lyapunov function can be used to determine the system stability
+Conclusion: This candidate Lyapunov function can be used to determine the system's stability. 
+Reasons: In the V(x1, x2) figure, there are no points where the function is negative, and in the dV/dt figure, there are no points where the function is positive. Therefore, conditions 1, 2, and 3 are satisfied. This function is a valid Lyapunov function.
+
 
 Test case 2: x1dot= -x1, x2dot=-2*x2, V(candidate Lyapunov function)=x1^2 - x2^2
 
 ![sample_output1](https://github.com/Tanayot007/Interactive_Lyapunov_2D/blob/main/3.png)
-
+![V(x) surface](https://github.com/Tanayot007/Interactive_Lyapunov_2D/blob/main/6.png)
 ![Vdot(x) surface](https://github.com/Tanayot007/Interactive_Lyapunov_2D/blob/main/4.png)
 
-Conclusion: This candidate Lyapunov function cannot be used to determine the system stability. User need to pick a new one.
-Reasons: The candidate does not obey condition 2 and 3.
+Conclusion: This candidate Lyapunov function cannot be used to determine the system's stability. The user needs to pick a new one.
+Reasons: In the V(x1, x2) figure, there are some points where the function is negative, and in the dV/dt figure, there are some points where the function is positive. Therefore, conditions 2 and 3 are not satisfied. This function is invalid.
 
 
 ---
