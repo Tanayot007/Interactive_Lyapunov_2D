@@ -8,7 +8,6 @@ This repository contains a Python demonstration for **visualizing candidate Lyap
 
 - `interactive_lyapunov_2D.py` : Main Python script containing the interactive Lyapunov function demo.
 - `README.md` : This documentation file.
-- `images/` : (Optional) Folder to store screenshots of the demo.
 
 ---
 
@@ -21,6 +20,15 @@ This demo allows users to:
    dx2/dt = f2(x1, x2)
 2. Explore the stability of the system visually through 3D plots.
 3. Interactively inspect surfaces and contours of V(x1, x2) and d/dtV(x1, x2).
+
+---
+## **How to run**
+
+1. Clone or download the repository to your local machine.
+2. Install Python dependencies (if you don’t have them already):
+pip install numpy sympy matplotlib
+4. Run the Python script using a terminal or command prompt:
+python interactive_lyapunov_2D.py
 
 ---
 
